@@ -8,6 +8,23 @@
 
 ---
 
+## ⚡ Try the Live Cloud Engine (10,000 Free Evaluation Runs)
+
+You can benchmark Eschaton's **38.2ms parallel batch fan-out** live against our production cluster with zero setup:
+
+* **Interactive In-Browser Tester:** [https://ciel.theeducode.com/alpha-test.html?product=eschaton&token=alpha_guest_10k_free](https://ciel.theeducode.com/alpha-test.html?product=eschaton&token=alpha_guest_10k_free)
+* **Instant Terminal `curl` (100% Judge0 Drop-In):**
+```bash
+curl -X POST "https://ciel.theeducode.com/v1/submissions?wait=true" \
+  -H "Authorization: Bearer alpha_guest_10k_free" \
+  -H "Content-Type: application/json" \
+  -d '{"language_id": 54, "source_code": "#include <iostream>\nint main() { std::cout << \"Eschaton 38ms Batch Execution Success!\"; return 0; }"}'
+```
+
+---
+
+---
+
 # 🚀 1. FLAGSHIP PRODUCT: ESCHATON CLOUD ENGINE
 
 > **The World's Fastest Code Evaluation, Competitive Judging & Algorithmic Profiling Grid.**  
