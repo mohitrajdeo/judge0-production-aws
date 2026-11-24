@@ -1,0 +1,18 @@
+[Unit]
+Description=Nephis Thanaton fleet metrics control plane
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/nephis/metrics
+Environment=PORT=8399
+Environment=STORAGE_DRIVER=local
+Environment=LOCAL_STORAGE_DIR=/var/lib/nephis/metrics-storage
+Environment=REDIS_DRIVER=embedded
+ExecStart=/opt/nephis/metrics/thanaton-api-metrics
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

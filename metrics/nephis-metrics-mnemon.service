@@ -1,0 +1,16 @@
+[Unit]
+Description=Nephis Mnemon metrics control plane
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/nephis/metrics
+Environment=PORT=7101
+Environment=MNEMON_ADMIN_SECRET=local-admin-secret
+ExecStart=/opt/nephis/metrics/mnemon-api-metrics
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
